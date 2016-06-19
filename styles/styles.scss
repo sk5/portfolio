@@ -1,0 +1,48 @@
+﻿@import "settings.variables";
+@import "tools.animation";
+
+@import "components.base";
+@import "components.menu";
+@import "components.header";
+@import "components.navigation";
+@import "components.article";
+
+.content-row {
+    width: 100%;
+
+    &.clear {
+        &:before,
+        &:after {
+            content: "";
+            display: table;
+        }
+        &:after {
+          clear: both;
+        }
+    }
+}
+.content-items {
+    animation: show-content-items .75s forwards ease-out 1.25s;
+    opacity: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+    width: 100%;
+    min-height: 25vh;
+    text-align: center;
+}
+.content-item {
+    width: 100%;
+    min-height: 45vh;
+}
+.landing-page-list {
+    display: inline-block; 
+    vertical-align: top;
+    margin: 0; 
+    padding: 0;
+    width: 400px; 
+    list-style: none; 
+}
+.list-item {
+    width: 25rem;
+    min-height: 2rem;
+}

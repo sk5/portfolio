@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        @RenderSection("head", required: false)
+
+        <link href="styles/styles-dev.css" rel="stylesheet" type="text/css"/>
+
+        <script src="https://use.typekit.net/wya3gkh.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+        
+    </head>
+<body>
+    @RenderBody()
+</body>
+
+</html>

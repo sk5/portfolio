@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@Page.Title</title>
+        @RenderSection("head", required: false)
+
+        <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
+
+        <script src="https://use.typekit.net/wya3gkh.js"></script>
+        <script>
+            try {
+                Typekit.load({ async: true });
+            } catch (e) {
+            }
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <span class="background-image"></span>
+        <menu class="menu">
+            <span class="menu-icon"></span>
+            <label class="menu-label">Menu</label>
+        </menu>
+
+        @RenderBody()
+
+        <nav class="content-row">
+            <ul class="navigation animate">
+                <li class="navigation-list-item">
+                    <span class="navigation-item">
+                        Shawn is
+                    </span>
+                </li>
+                <li class="navigation-list-item">
+                    <a class="navigation-item is-active" href="">
+                        Designing
+                    </a>
+                </li>
+                <li class="navigation-list-item">
+                    <a class="navigation-item" href="">
+                        Coding
+                    </a>
+                </li>
+                <li class="navigation-list-item">
+                    <a class="navigation-item" href="">
+                        Writing
+                    </a>
+                </li>
+                <li class="navigation-list-item">
+                    <a class="navigation-item" href="">
+                        Talking
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Snap SVG animation library -->
+        <script src="scripts/snap.svg-min.js"></script>
+        <!-- Snap SVG Mina library -->
+        <script src="scripts/mina.js"></script>
+        <!-- Snap SVG animations -->
+        <script src="scripts/svg-animations.js"></script>
+        <!-- In view animations for menu -->
+        <script src="scripts/in-view-animations.js"></script>
+    </body>
+
+</html>

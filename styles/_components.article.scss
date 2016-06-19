@@ -1,0 +1,119 @@
+﻿.article {
+    margin: 0 auto;
+    padding-top: 7.125rem;
+    padding-bottom: 5rem;
+    width: 50rem;
+    font-size: 1.4375rem;
+    color: lighten(black, 25%);
+
+    img {
+        max-width: 50rem;
+
+        &.feature {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 0 .125rem rgba(black, .5),
+                 0 0 0 2rem $primary-color;
+        }
+    }
+
+    h2,h3,h4,h5 {
+        margin-top: 3.5rem;
+        margin-bottom: 1.75rem;
+        font-family: $sans-serif;
+        line-height: 1.25;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    h2 {
+        font-size: 200%;
+        color: $primary-color;
+    }
+    h3 {
+        font-size: 175%;
+        color: lighten($primary-color, 10%);
+    }
+    h4 {
+        font-size: 150%;
+        color: lighten($primary-color, 20%);
+    }
+    h5 {
+        font-size: 125%;
+        color: lighten($primary-color, 30%);
+    }
+
+    p {
+        font-family: $serif;
+        font-size: 100%;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            padding-left: 1rem;
+
+            &:before {
+                content: "• ";
+                color: $tertiary-color;              
+            }
+            &:nth-child(3n+1):before {
+                color: $secondary-color;
+            }
+            &:nth-child(3n+2):before {
+                color: $primary-color;
+            }
+        }
+    }
+
+    q { 
+        position: relative;
+        display: block;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        padding: 1.5em;
+        font-family: $serif;
+        font-size: 150%;
+        font-style: italic;
+        color: $primary-color;
+        background: #ecf0f1;
+        box-shadow: 0 1rem 0 -.875rem $tertiary-color;
+
+        &:before {
+            //content: "“";
+            content: "";
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 0;
+            height: 0;
+            border-left: 2.5rem solid $secondary-color;
+            border-bottom: 2.5rem solid transparent;
+        }
+        &:after {
+            //content: "”";
+            content: "";
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            width: 0;
+            height: 0;
+            border-left: 2.5rem solid $tertiary-color;
+            border-bottom: 2.5rem solid transparent;
+        }
+
+        cite {
+            display: block;
+            margin-top: .5em;
+            padding-left: 1em;
+            font-family: $sans-serif;
+            font-style: normal;
+            font-size: 60%;    
+            color: $secondary-color;
+        }
+    }
+}

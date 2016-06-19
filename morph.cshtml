@@ -1,0 +1,173 @@
+﻿@{
+    Page.Title = "Title goes here";
+    Layout = "_Layout.cshtml";
+}
+
+<div>
+
+    <div style="width: 10rem;">
+
+        @*<svg id="Layer_0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.2 53.3">
+            <circle id="circle1" cx="5" cy="5" r="5" fill="#3B97D3"/>
+            <path id="circle1" d="M0,5a5,5 0 1,0 10,0a5,5 0 1,0 -10,0"></path>
+            <path id="circle2" d="M23,5a5,5 0 1,0 10,0a5,5 0 1,0 -10,0"></path>
+            <path id="circle3" d="M46,5a5,5 0 1,0 10,0a5,5 0 1,0 -10,0"></path>
+            <circle id="circle2" cx="28" cy="5" r="5" fill="#E64C3C" />
+            <circle id="circle3" cx="51" cy="5" r="5" fill="#2C3E50" />
+        </svg>*@
+
+        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.2 53.3">
+            <style>
+                .st0, #circle2 {
+                    fill: #E64C3C;
+                }
+
+                .st1, #circle1 {
+                    fill: #3B97D3;
+                }
+
+                .st2, #circle3 {
+                    fill: #2C3E50;
+                }
+            </style>
+            <path id="circle1" d="M0,5a5,5 0 1,0 10,0a5,5 0 1,0 -10,0"/>
+            <path id="circle2" d="M23,5a5,5 0 1,0 10,0a5,5 0 1,0 -10,0"/>
+            <path id="circle3" d="M46,5a5,5 0 1,0 10,0a5,5 0 1,0 -10,0"/>
+            <path id="crown1" style="visibility: hidden" class="st0" d="M.2 53.2L26 1.6c1.1-2.1 3.1-2.1 4.1 0s25.8 51.6 25.8 51.6H.2z"/>
+            <path id="crown2" style="visibility: hidden" class="st1" d="M.2 53.2V1.6c0-2.1 2.1-2.1 4.1 0s51.6 51.6 51.6 51.6H.2z"/>
+            <path id="crown3" style="visibility: hidden" class="st2" d="M55.9 53.2V1.6c0-2.1-2.1-2.1-4.1 0S.2 53.2.2 53.2h55.7z"/>
+        </svg>
+
+    </div>
+
+    <div style="width:10rem">
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.2 53.3"></svg>
+    </div>
+
+    <script src="snap.svg-min.js"></script>
+    <script src="mina.js"></script>
+
+    <script>
+        var s = Snap("#svg");
+        var crownCenter = s.path("M.2 53.2L26 1.6c1.1-2.1 3.1-2.1 4.1 0s25.8 51.6 25.8 51.6H.2z")
+            .attr({
+                fill: "#fff"
+            });
+        //var crownCircleCenter = s.circle(28, 0, 0)
+        //    .attr({
+        //        fill: "#E64C3C"
+        //    });
+
+        //var crownCenterMask = s.path("M.2 53.2L26 1.6c1.1-2.1 3.1-2.1 4.1 0s25.8 51.6 25.8 51.6H.2z")
+        //    .attr({
+        //        fill: "#E64C3C"
+        //    });
+
+        // X, Y, width, height, rounded, rounded
+        var squareCenter = s.rect(0, 70, 70, 70, 0, 0)
+            .attr({
+                fill: "#E64C3C"
+            });
+
+        //square.transform('r63.5');
+
+        squareCenter.attr({
+            mask: crownCenter
+        });
+        squareCenter.animate({ x: 0, y: 0 }, 300, mina.easeout);
+
+        setTimeout(function() {
+                var crownLeft = s.path("M.2 53.2V1.6c0-2.1 2.1-2.1 4.1 0s51.6 51.6 51.6 51.6H.2z")
+                    .attr({
+                        fill: "#fff",
+                        opacity: "0.6"
+                    });
+                var squareLeft = s.rect(70, 0, 70, 70, 0, 0)
+                    .attr({
+                        fill: "#3B97D3"
+                    });
+                squareLeft.attr({
+                    mask: crownLeft
+                });
+                squareLeft.animate({ x: 0, y: 0 }, 300, mina.easeout);
+            },
+            160);
+
+        setTimeout(function() {
+                var crownRight = s.path("M55.9 53.2V1.6c0-2.1-2.1-2.1-4.1 0S.2 53.2.2 53.2h55.7z")
+                    .attr({
+                        fill: "#fff",
+                        opacity: "0.6"
+                    });
+                var squareRight = s.rect(-70, 0, 70, 70, 0, 0)
+                    .attr({
+                        fill: "#2C3E50"
+                    });
+                squareRight.attr({
+                    mask: crownRight
+                });
+                squareRight.animate({ x: 0, y: 0 }, 300, mina.easeout);
+            },
+            420);
+
+        //large.animate({
+        //    opacity:1
+        //}, 200, mina.easeout, function () {
+        //    setTimeout(delayReveal("line"), 3000));
+        //});
+
+        //crownCircleCenter.attr({
+        //    mask: crownCenter
+        //});
+        //crownCircleCenter.animate({ r: 60 }, 500);
+    </script>
+
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+        <style>
+            .st0 {
+                fill: #F04B4B;
+            }
+
+            .st1 {
+                opacity: 0.75;
+            }
+
+            .st2 {
+                fill: #FFFFFF;
+            }
+
+            .st3 {
+                fill: #6CCFF6;
+            }
+
+            .st4 {
+                fill: #223267;
+            }
+        </style>
+        <g id="crown-logo">
+            <path id="crown-center_2_" class="st0" d="M69.7 69.8H2.4L36.1 2.4l33.6 67.4zM36.1 25L18.7 59.6h34.7L36.1 25z"/>
+            <g id="crown-left_2_" class="st1">
+                <path class="st2" d="M12.5 26.3v33.3h33.3z"/>
+                <path class="st3" d="M2.4 2.4l67.4 67.4H2.4V2.4zm10.1 23.9v33.4h33.4L12.5 26.3z"/>
+            </g>
+            <g id="crown-right_2_" class="st1">
+                <path class="st2" d="M26.3 59.6h33.3V26.3z"/>
+                <path class="st4" d="M69.7 69.8H2.4L69.7 2.4v67.4zM26.3 59.6h33.4V26.3L26.3 59.6z"/>
+            </g>
+        </g>
+        <g id="crown-logo-condensed">
+            <path id="crown-center_3_" class="st0" d="M69.7 69.8H2.4l33.7-13.6 33.6 13.6zm-33.6-10l-7.9-.2H43.9l-7.8.2z"/>
+            <g id="crown-left_3_" class="st1">
+                <path class="st2" d="M12.5 59.5v.1L45.8 66z"/>
+                <path class="st3" d="M2.4 56.2l67.4 13.6H2.4V56.2zm10.1 3.4L45.8 66l-33.3-6.4z"/>
+            </g>
+            <g id="crown-right_3_" class="st1">
+                <path class="st2" d="M26.3 66l33.3-6.4v-.1z"/>
+                <path class="st4" d="M69.7 69.8H2.4l67.4-13.6v13.6zM26.3 66l33.4-6.3L26.3 66z"/>
+            </g>
+        </g>
+    </svg>
+
+</div>

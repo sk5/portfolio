@@ -1,0 +1,135 @@
+﻿//@import 'breakpoint';
+
+$desktop: 960px;
+
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,900italic,300);
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding: 1em;
+  font-family: 'industry', sans-serif;
+  background-color: #fff;
+  
+  /*@include breakpoint($desktop) {
+    padding: 2em;
+  }*/
+}
+
+.siteWrap {
+  width: 100%;
+  height: 100%;
+  position:relative;
+}
+
+.will-animate {
+  visibility: hidden;
+}
+
+.textMask {
+  
+  & {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &__svg {
+    width: 100%;
+    height: 100%;
+    position: relative;    
+  }
+  
+  &__textWrap {
+    /* text-anchor: middle; */
+  }
+  
+  &__title {
+    font-weight: 900;
+    font-size: 3em;
+    text-transform: uppercase;
+    
+    /*@include breakpoint($desktop) {
+      font-size: 20vh;
+    }*/
+  }
+  
+  &__mask {
+    font-weight: 900;
+  }
+  
+  text {
+    /* text-anchor: middle; */
+  }
+  
+  &__alpha {
+    fill: #fff;
+    transition: opacity .6s ease;
+  }
+  
+  &__base {
+    fill: #fff;
+    mask: url(#mask);
+    transition: opacity .6s ease;
+  }
+}
+
+.siteTitle {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  line-height: 1;
+  margin: 0;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: uppercase;
+  
+  /*@include breakpoint($desktop) {
+    font-size: 20vh;
+  }*/
+}
+
+.bgImage {
+  width: 100%;
+  height: 700px;
+  background: url(../images/balloon.jpeg);
+  background-position: center left;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+#replay {
+  border: 1px solid #fff;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: transparent;
+  height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 2em;
+  transition: all .3s ease;
+  
+  
+  
+  &:hover {
+    background-color: #fff;
+    color:#000;
+  }
+}

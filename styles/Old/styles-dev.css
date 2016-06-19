@@ -1,0 +1,156 @@
+﻿* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ECF0F1; }
+
+.shawn-brand {
+  position: fixed;
+  top: 6rem;
+  right: 10rem;
+  padding: 1em;
+  width: 8.75rem;
+  height: auto;
+  text-align: center; }
+
+.shawn-crown {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem; }
+
+.site-title {
+  margin: 0; }
+
+.shawn-title,
+.shawn-label {
+  font-family: "brandon-grotesque", sans-serif;
+  line-height: 125%;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.shawn-title {
+  margin-top: .125rem;
+  font-size: 1.875rem;
+  color: #E64C3C; }
+
+.shawn-label {
+  display: block;
+  font-size: 1rem;
+  color: #2C3E50; }
+  .shawn-label .sub {
+    color: #3B97D3; }
+
+.navigation {
+  display: block;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-family: "brandon-grotesque", sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.navigation-item {
+  display: inline-block;
+  margin-right: 1.5rem; }
+  .navigation-item:last-child {
+    margin-right: 0; }
+
+.page-navigation {
+  position: fixed;
+  top: 17rem;
+  right: 10rem;
+  margin: 0;
+  padding: 0 1rem;
+  width: 8.75rem;
+  list-style: none; }
+
+.article {
+  padding: 3rem 0 3rem 10rem;
+  max-width: 46.875rem;
+  min-height: 95vh; }
+  .article h2:first-child {
+    margin-top: 0; }
+  .article h2,
+  .article h3,
+  .article h4,
+  .article h5 {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 800;
+    line-height: 125%;
+    color: #2C3E50; }
+  .article h2 {
+    font-size: 3rem; }
+  .article h3 {
+    font-size: 2.25rem; }
+  .article h4 {
+    font-size: 1.75rem; }
+  .article h5 {
+    font-size: 1.5rem; }
+  .article p {
+    font-family: "calluna", serif;
+    font-size: 1.3125rem;
+    line-height: 150%; }
+
+.header-dev {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem 10rem;
+  height: 9rem; }
+  .header-dev:before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: -1rem;
+    left: -1rem;
+    transform: rotate(0.5deg);
+    width: calc(100% + 2rem);
+    height: 9rem;
+    background: #2C3E50; }
+  .header-dev:after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: -.75rem;
+    right: -1rem;
+    left: -1rem;
+    transform: rotate(-1deg);
+    width: calc(100% + 2rem);
+    height: 10rem;
+    background: #E64C3C; }
+
+.logo-circle {
+  float: left;
+  padding: 1.625rem 1.5rem 1.4375rem 1.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  background: #ECF0F1;
+  border-radius: 50%; }
+
+.words {
+  float: left;
+  margin-top: .75rem;
+  margin-left: 1.5rem;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ECF0F1; }
+
+.name, .current-section {
+  display: block;
+  line-height: 125%; }
+
+.name {
+  font-size: 2rem; }
+
+.current-section {
+  font-size: 1rem; }
+

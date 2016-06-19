@@ -1,0 +1,111 @@
+﻿.header {
+    width: 100%;
+    text-align: center;
+
+    &.condensed {
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        padding-top: .3125rem;
+        width: 20rem;
+        height: 3.125rem;
+        text-align: left;
+    }
+}
+.site-logo {
+    display: inline-block;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    width: 10rem;
+
+    .condensed & {
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+.site-title {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    width: 10rem;
+    font-family: $sans-serif;
+    line-height: 115%;
+    text-transform: uppercase;
+
+    .condensed & {
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-top: 0;
+        padding-left: .5rem;
+    }
+}
+.title-text {
+    -moz-animation: show-title .25s forwards ease-out 1.4s;
+    -o-animation: show-title .25s forwards ease-out 1.4s;
+    -webkit-animation: show-title .25s forwards ease-out 1.4s;
+    animation: show-title .25s forwards ease-out 1.4s;
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    display: block;
+    opacity: 0;
+    font-size: 2.6875rem;
+    color: $secondary-color;
+
+    .condensed & {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+    }
+}
+.sub-title-text {
+    -moz-animation: show-title .25s forwards ease-out 1.5s;
+    -o-animation: show-title .25s forwards ease-out 1.5s;
+    -webkit-animation: show-title .25s forwards ease-out 1.5s;
+    animation: show-title .25s forwards ease-out 1.5s;
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    display: block;
+    opacity: 0;
+    font-size: 1.5rem;
+    color: $tertiary-color;
+
+    .condensed & {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+    }
+
+    strong {
+        color: $primary-color;
+    }
+}
+.quote {
+    animation: show-quote .5s forwards ease-out 2.25s;
+    display: block;
+    opacity: 0;
+    margin: -2rem auto 0 auto;
+    padding-bottom: 0;
+    width: 50rem;
+    font-family: $sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $primary-color;
+
+    .quotation-mark {
+        color: $secondary-color;
+    }
+
+    i {
+        color: $tertiary-color;
+    }
+}
